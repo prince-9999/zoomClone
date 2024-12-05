@@ -1,0 +1,201 @@
+/* Base Styles (Desktop First) */
+.landingPageContainer {
+  width: 100vw;
+  height: 100vh;
+  background: url("/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  /* overflow: hidden; */
+}
+
+.landingPageContainer nav {
+  padding-inline: 1.1rem;
+  padding-block: 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mainHeading{
+  color: blue;
+  
+}
+
+.landingPageContainer nav h2 {
+  font-size: 1.8rem;
+  font-weight: 650;
+  color: blue;
+}
+
+.landingPageContainer nav .navlist {
+  display: flex;
+  gap: 1.6rem;
+  cursor: pointer;
+}
+
+.landingMainContainer {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 3rem;
+  height: 80vh;
+  align-items: center;
+}
+
+.landingMainContainer > div:nth-child(1) {
+  font-size: 1.8rem;
+}
+
+.landingMainContainer > div:nth-child(1) div[role='button'] {
+  background: #D97500;
+  width: fit-content;
+  padding: 0.5rem;
+  border-radius: 40px;
+  margin-top: 1.9rem;
+}
+
+.landingMainContainer > div:nth-child(1) div[role='button'] a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.7rem;
+}
+
+.landingMainContainer > div:nth-child(2) img {
+  height: 70vh;
+  width: auto;
+  
+}
+
+
+/* //enter into loby */
+
+.joinVideoContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ margin-top: 20px;
+ border-radius: 10px;
+ 
+}
+
+.joinInput{
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  gap: 15px;
+  padding-inline: 8px;
+}
+
+.btnSection{
+  display: flex;
+  justify-content: space-between;
+  
+
+}
+
+.guest{
+  display: none;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .landingMainContainer {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding-inline: 0.3rem;
+    height: auto;
+  }
+
+  .landingMainContainer > div:nth-child(1) {
+    margin-bottom: 2rem;
+    font-size: 1.6rem;
+  }
+
+  .landingMainContainer > div:nth-child(2) img {
+    height: 50vh;
+    width: auto;
+  }
+
+  
+}
+
+@media (max-width: 768px) {
+  .landingPageContainer nav {
+    flex-direction: row;
+    align-items: center;
+  }
+  
+
+  .landingMainContainer{
+    flex-direction: column-reverse;
+    position: absolute;
+  }
+
+  .navlist{
+    display: none !important;
+  }
+
+  .landingPageContainer nav h2 {
+    font-size: 1.5rem;
+    
+  }
+
+  .landingPageContainer nav .navlist {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .landingMainContainer > div:nth-child(1) {
+    font-size: 1.4rem;
+  }
+
+  .landingMainContainer > div:nth-child(1) div[role='button'] a {
+    font-size: 1.5rem;
+  }
+
+  .landingMainContainer > div:nth-child(2) img {
+    height: 40vh;
+  }
+
+  .joinVideoContainer{
+    width: -webkit-fill-available;
+  }
+
+  .guest{
+    display:block;
+  }
+}
+
+@media (max-width: 480px) {
+  .landingMainContainer {
+    padding-inline: 0.5rem;
+    flex-direction: column-reverse;
+  }
+
+  .joinVideoContainer{
+    width: -webkit-fill-available;
+  
+  }
+
+  .lobyPage{
+    max-width: 1180px;
+    overflow: hidden;
+  }
+
+  .landingMainContainer > div:nth-child(1) {
+    font-size: 1rem;
+  }
+
+  .landingMainContainer > div:nth-child(1) div[role='button'] {
+    padding: 0.6rem;
+  }
+
+  .landingMainContainer > div:nth-child(1) div[role='button'] a {
+    font-size: 1.2rem;
+  }
+
+  .landingMainContainer > div:nth-child(2) img {
+    height: 30vh;
+  }
+}
