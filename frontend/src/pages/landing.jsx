@@ -3,6 +3,8 @@ import "../App.css"
 import { Link, useNavigate } from 'react-router-dom'
 
 export default function LandingPage() {
+
+  const router = useNavigate();
   return (
     <div className='landingPageContainer'>
       <nav>
@@ -12,18 +14,18 @@ export default function LandingPage() {
         <div className='navlist'>
 
           <p onClick={() => {
-            window.location.href = "/gguu5y7"
+            router("/aljk23")
           }}>join as guest</p>
 
 
           <p onClick={() => {
-            window.location.href = "/auth"
+             router("/auth")
           }}>Register</p>
 
 
           <div role='button'>
             <p onClick={() => {
-              window.location.href = "/auth"
+               router("/auth")
             }}>login</p>
           </div>
 
