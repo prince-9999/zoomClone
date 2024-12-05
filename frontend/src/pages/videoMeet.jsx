@@ -12,9 +12,10 @@ import StopScreenShareIcon from '@mui/icons-material/StopScreenShare'
 import io from "socket.io-client";
 import { Button } from '@mui/material';
 import "../styles/videoMeet.css"
+import server from '../environment';
 
 
-const server_url = "http://localhost:8000";
+const server_url = server;
 
 var connections = {};
 
