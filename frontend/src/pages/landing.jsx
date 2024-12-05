@@ -46,7 +46,7 @@ export default function LandingPage() {
 
             <div className='guest' role='button'>
               <p onClick={() => {
-                window.location.href = "/gguu5y7"
+                router("/auth")
               }}>join as guest</p>
             </div>
 

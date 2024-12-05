@@ -13,6 +13,7 @@ import io from "socket.io-client";
 import { Button } from '@mui/material';
 import "../styles/videoMeet.css"
 import server from '../environment';
+import { useNavigate } from 'react-router-dom';
 
 
 const server_url = server;
@@ -27,7 +28,11 @@ const peerConfigConnections = {
 
 
 
+
+
 export default function VideoMeet() {
+
+    const router = useNavigate();
 
     var socketRef = useRef();
     let socketIdRef = useRef();
@@ -365,7 +370,7 @@ export default function VideoMeet() {
             let tracks = localVideoref.current.srcObject.getTracks()
             tracks.forEach(track => track.stop())
         } catch (e) { }
-        window.location.href = "/home"
+        router("/home")
     }
 
 
