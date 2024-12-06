@@ -12,7 +12,7 @@ import StopScreenShareIcon from '@mui/icons-material/StopScreenShare'
 import io from "socket.io-client";
 import { Button } from '@mui/material';
 import "../styles/videoMeet.css"
-import server from '../environment';
+import server from '../environment.js';
 import { useNavigate } from 'react-router-dom';
 
 
